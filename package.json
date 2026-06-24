@@ -12,6 +12,12 @@
     "@fontsource/quattrocento-sans": "^5.2.8",
     "@fontsource/quicksand": "^5.2.10",
     "@fontsource/roboto": "^5.2.10",
+    "@aws-amplify/auth": "^6.12.4",
+    "@aws-amplify/backend-graphql": "^0.3.2",
+    "@aws-amplify/core": "^6.11.4",
+    "@aws-amplify/graphql-schema-generator": "^0.11.11",
+    "@aws-amplify/ui-react": "^6.11.2",
+    "aws-amplify": "^6.14.4",
     "next": "^16.2.9",
     "react": "19.2.4",
     "react-dom": "19.2.4",
@@ -20,6 +26,8 @@
     "sass": "^1.101.0"
   },
   "devDependencies": {
+    "@aws-amplify/backend": "^1.16.1",
+    "@aws-amplify/backend-cli": "^1.7.2",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
