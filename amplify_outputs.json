@@ -1,8 +1,8 @@
 {
   "data": {
-    "url": "https://p2rqi6axcvfwjglw4q4ttedbee.appsync-api.us-east-2.amazonaws.com/graphql",
+    "url": "https://vyrfzpck7jamtgjfoojp7sj2te.appsync-api.us-east-2.amazonaws.com/graphql",
     "aws_region": "us-east-2",
-    "api_key": "da2-4unrtnfnszcvve2twcjq7z7s7u",
+    "api_key": "da2-2ejrx3yluvc3hkur27sgohtj7m",
     "default_authorization_type": "API_KEY",
     "authorization_types": [
       "AWS_IAM"
@@ -80,6 +80,15 @@
               "properties": {}
             },
             {
+              "type": "key",
+              "properties": {
+                "fields": [
+                  "id",
+                  "pageType"
+                ]
+              }
+            },
+            {
               "type": "auth",
               "properties": {
                 "rules": [
@@ -95,9 +104,11 @@
             }
           ],
           "primaryKeyInfo": {
-            "isCustomPrimaryKey": false,
+            "isCustomPrimaryKey": true,
             "primaryKeyFieldName": "id",
-            "sortKeyFieldNames": []
+            "sortKeyFieldNames": [
+              "pageType"
+            ]
           }
         }
       },

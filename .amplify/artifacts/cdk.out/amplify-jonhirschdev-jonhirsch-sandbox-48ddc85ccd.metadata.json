@@ -419,9 +419,8 @@
         "async AmplifySandboxExecutor.<anonymous> (file:///Users/jonhirsch/Desktop/dev/JonHirsch.dev/node_modules/@aws-amplify/sandbox/lib/sandbox_executor.js:14:43)",
         "async file:///Users/jonhirsch/Desktop/dev/JonHirsch.dev/node_modules/@aws-amplify/sandbox/lib/file_watching_sandbox.js:216:38",
         "async FileWatchingSandbox.deploy (file:///Users/jonhirsch/Desktop/dev/JonHirsch.dev/node_modules/@aws-amplify/sandbox/lib/file_watching_sandbox.js:213:9)",
-        "async file:///Users/jonhirsch/Desktop/dev/JonHirsch.dev/node_modules/@aws-amplify/sandbox/lib/file_watching_sandbox.js:138:13",
-        "async FileWatchingSandbox.start (file:///Users/jonhirsch/Desktop/dev/JonHirsch.dev/node_modules/@aws-amplify/sandbox/lib/file_watching_sandbox.js:179:13)",
-        "async Object.handler (file:///Users/jonhirsch/Desktop/dev/JonHirsch.dev/node_modules/@aws-amplify/backend-cli/lib/commands/sandbox/sandbox_command.js:79:9)"
+        "async file:///Users/jonhirsch/Desktop/dev/JonHirsch.dev/node_modules/@aws-amplify/sandbox/lib/file_watching_sandbox.js:148:17",
+        "async file:///Users/jonhirsch/Desktop/dev/JonHirsch.dev/node_modules/@aws-amplify/sandbox/lib/file_watching_sandbox.js:167:21"
       ]
     }
   ],
@@ -1235,6 +1234,23 @@
       "data": "PageTable"
     }
   ],
+  "/amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/QuerygetPagepreAuth0Function/QuerygetPagepreAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QuerygetPagepreAuth0FunctionQuerygetPagepreAuth0FunctionAppSyncFunctionCA21338B"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QuerygetPagepreAuth0Function"
+    }
+  ],
   "/amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/QuerygetPageauth0Function/QuerygetPageauth0Function.AppSyncFunction": [
     {
       "type": "aws:cdk:logicalId",
@@ -1284,6 +1300,23 @@
     {
       "type": "graphqltransformer:resourceName",
       "data": "QueryGetPageDataResolverFn"
+    }
+  ],
+  "/amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/QuerylistPagespreAuth0Function/QuerylistPagespreAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "QuerylistPagespreAuth0FunctionQuerylistPagespreAuth0FunctionAppSyncFunction9829A9F3"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "QuerylistPagespreAuth0Function"
     }
   ],
   "/amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/QuerylistPagesauth0Function/QuerylistPagesauth0Function.AppSyncFunction": [
@@ -1354,6 +1387,23 @@
       "data": "MutationcreatePageinit0Function"
     }
   ],
+  "/amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/MutationcreatePagepreAuth0Function/MutationcreatePagepreAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationcreatePagepreAuth0FunctionMutationcreatePagepreAuth0FunctionAppSyncFunction9E10C7FE"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationcreatePagepreAuth0Function"
+    }
+  ],
   "/amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/MutationcreatePageauth0Function/MutationcreatePageauth0Function.AppSyncFunction": [
     {
       "type": "aws:cdk:logicalId",
@@ -1422,6 +1472,23 @@
       "data": "MutationupdatePageinit0Function"
     }
   ],
+  "/amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/MutationupdatePagepreAuth0Function/MutationupdatePagepreAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationupdatePagepreAuth0FunctionMutationupdatePagepreAuth0FunctionAppSyncFunctionFB7CEB63"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationupdatePagepreAuth0Function"
+    }
+  ],
   "/amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/MutationupdatePageauth0Function/MutationupdatePageauth0Function.AppSyncFunction": [
     {
       "type": "aws:cdk:logicalId",
@@ -1471,6 +1538,23 @@
     {
       "type": "graphqltransformer:resourceName",
       "data": "MutationUpdatePageDataResolverFn"
+    }
+  ],
+  "/amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/MutationdeletePagepreAuth0Function/MutationdeletePagepreAuth0Function.AppSyncFunction": [
+    {
+      "type": "aws:cdk:logicalId",
+      "data": "MutationdeletePagepreAuth0FunctionMutationdeletePagepreAuth0FunctionAppSyncFunction4B2DA53A"
+    },
+    {
+      "type": "aws:cdk:creationStack",
+      "data": [
+        "...@aws-amplify/graphql-api-construct, @aws-amplify/backend-data, @aws-amplify/backend...",
+        "(no user code in 10 frames, use --stack-trace-limit to capture more)"
+      ]
+    },
+    {
+      "type": "graphqltransformer:resourceName",
+      "data": "MutationdeletePagepreAuth0Function"
     }
   ],
   "/amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/MutationdeletePageauth0Function/MutationdeletePageauth0Function.AppSyncFunction": [

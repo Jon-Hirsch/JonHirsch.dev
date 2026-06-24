@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 
 import "./styles/styles.scss";
@@ -13,6 +14,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body>

@@ -362,12 +362,20 @@
      {
       "attributeName": "id",
       "attributeType": "S"
+     },
+     {
+      "attributeName": "pageType",
+      "attributeType": "S"
      }
     ],
     "keySchema": [
      {
       "attributeName": "id",
       "keyType": "HASH"
+     },
+     {
+      "attributeName": "pageType",
+      "keyType": "RANGE"
      }
     ],
     "provisionedThroughput": {
@@ -592,6 +600,28 @@
     "aws:cdk:path": "amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/PageDataSource/Resource"
    }
   },
+  "QuerygetPagepreAuth0FunctionQuerygetPagepreAuth0FunctionAppSyncFunctionCA21338B": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyjonhirschdevjonhirschsandbox48ddc85ccddataamplifyDataGraphQLAPI4F8839C3ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyjonhirschdevjonhirschsandbox48ddc85ccddataamplifyDataGraphQLAPINONEDS9BEEB3AAName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerygetPagepreAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/0b30e76c5a825864fc5943a2979d6e7de02fef3e37747433ea8066c50fa5843f.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/QuerygetPagepreAuth0Function/QuerygetPagepreAuth0Function.AppSyncFunction"
+   }
+  },
   "QuerygetPageauth0FunctionQuerygetPageauth0FunctionAppSyncFunctionA32D74C2": {
    "Type": "AWS::AppSync::FunctionConfiguration",
    "Properties": {
@@ -678,6 +708,12 @@
      "Functions": [
       {
        "Fn::GetAtt": [
+        "QuerygetPagepreAuth0FunctionQuerygetPagepreAuth0FunctionAppSyncFunctionCA21338B",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
         "QuerygetPageauth0FunctionQuerygetPageauth0FunctionAppSyncFunctionA32D74C2",
         "FunctionId"
        ]
@@ -742,6 +778,28 @@
    "DeletionPolicy": "Delete",
    "Metadata": {
     "aws:cdk:path": "amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/queryGetPageResolver"
+   }
+  },
+  "QuerylistPagespreAuth0FunctionQuerylistPagespreAuth0FunctionAppSyncFunction9829A9F3": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyjonhirschdevjonhirschsandbox48ddc85ccddataamplifyDataGraphQLAPI4F8839C3ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyjonhirschdevjonhirschsandbox48ddc85ccddataamplifyDataGraphQLAPINONEDS9BEEB3AAName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerylistPagespreAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/82a969c73ef380984dda36afb591beee1a349b7a67dccd158853a13981b4d8e2.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/QuerylistPagespreAuth0Function/QuerylistPagespreAuth0Function.AppSyncFunction"
    }
   },
   "QuerylistPagesauth0FunctionQuerylistPagesauth0FunctionAppSyncFunction549DEA4D": {
@@ -830,6 +888,12 @@
      "Functions": [
       {
        "Fn::GetAtt": [
+        "QuerylistPagespreAuth0FunctionQuerylistPagespreAuth0FunctionAppSyncFunction9829A9F3",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
         "QuerylistPagesauth0FunctionQuerylistPagesauth0FunctionAppSyncFunction549DEA4D",
         "FunctionId"
        ]
@@ -916,6 +980,28 @@
    "DeletionPolicy": "Delete",
    "Metadata": {
     "aws:cdk:path": "amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/MutationcreatePageinit0Function/MutationcreatePageinit0Function.AppSyncFunction"
+   }
+  },
+  "MutationcreatePagepreAuth0FunctionMutationcreatePagepreAuth0FunctionAppSyncFunction9E10C7FE": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyjonhirschdevjonhirschsandbox48ddc85ccddataamplifyDataGraphQLAPI4F8839C3ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyjonhirschdevjonhirschsandbox48ddc85ccddataamplifyDataGraphQLAPINONEDS9BEEB3AAName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreatePagepreAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/921ae6ff67626235e72c11dac51cd257416d67e56d57197a9e4ed29e23dcf6d1.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/MutationcreatePagepreAuth0Function/MutationcreatePagepreAuth0Function.AppSyncFunction"
    }
   },
   "MutationcreatePageauth0FunctionMutationcreatePageauth0FunctionAppSyncFunction2A2F95F1": {
@@ -1010,6 +1096,12 @@
       },
       {
        "Fn::GetAtt": [
+        "MutationcreatePagepreAuth0FunctionMutationcreatePagepreAuth0FunctionAppSyncFunction9E10C7FE",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
         "MutationcreatePageauth0FunctionMutationcreatePageauth0FunctionAppSyncFunction2A2F95F1",
         "FunctionId"
        ]
@@ -1096,6 +1188,28 @@
    "DeletionPolicy": "Delete",
    "Metadata": {
     "aws:cdk:path": "amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/MutationupdatePageinit0Function/MutationupdatePageinit0Function.AppSyncFunction"
+   }
+  },
+  "MutationupdatePagepreAuth0FunctionMutationupdatePagepreAuth0FunctionAppSyncFunctionFB7CEB63": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyjonhirschdevjonhirschsandbox48ddc85ccddataamplifyDataGraphQLAPI4F8839C3ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyjonhirschdevjonhirschsandbox48ddc85ccddataamplifyDataGraphQLAPINONEDS9BEEB3AAName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdatePagepreAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/921ae6ff67626235e72c11dac51cd257416d67e56d57197a9e4ed29e23dcf6d1.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/MutationupdatePagepreAuth0Function/MutationupdatePagepreAuth0Function.AppSyncFunction"
    }
   },
   "MutationupdatePageauth0FunctionMutationupdatePageauth0FunctionAppSyncFunction54197B0B": {
@@ -1198,6 +1312,12 @@
       },
       {
        "Fn::GetAtt": [
+        "MutationupdatePagepreAuth0FunctionMutationupdatePagepreAuth0FunctionAppSyncFunctionFB7CEB63",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
         "MutationupdatePageauth0FunctionMutationupdatePageauth0FunctionAppSyncFunction54197B0B",
         "FunctionId"
        ]
@@ -1262,6 +1382,28 @@
    "DeletionPolicy": "Delete",
    "Metadata": {
     "aws:cdk:path": "amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/mutationUpdatePageResolver"
+   }
+  },
+  "MutationdeletePagepreAuth0FunctionMutationdeletePagepreAuth0FunctionAppSyncFunction4B2DA53A": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyjonhirschdevjonhirschsandbox48ddc85ccddataamplifyDataGraphQLAPI4F8839C3ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyjonhirschdevjonhirschsandbox48ddc85ccddataamplifyDataGraphQLAPINONEDS9BEEB3AAName"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationdeletePagepreAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/9d03a1612668efd595e31aa543e8ec2a0e375e082b41c9b5d790dfd7b70f68ad.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-jonhirschdev-jonhirsch-sandbox-48ddc85ccd/data/amplifyData/Page/MutationdeletePagepreAuth0Function/MutationdeletePagepreAuth0Function.AppSyncFunction"
    }
   },
   "MutationdeletePageauth0FunctionMutationdeletePageauth0FunctionAppSyncFunctionA522C820": {
@@ -1356,6 +1498,12 @@
     "Kind": "PIPELINE",
     "PipelineConfig": {
      "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationdeletePagepreAuth0FunctionMutationdeletePagepreAuth0FunctionAppSyncFunction4B2DA53A",
+        "FunctionId"
+       ]
+      },
       {
        "Fn::GetAtt": [
         "MutationdeletePageauth0FunctionMutationdeletePageauth0FunctionAppSyncFunctionA522C820",

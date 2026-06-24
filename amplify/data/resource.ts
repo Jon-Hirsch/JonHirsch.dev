@@ -3,13 +3,16 @@ import { type ClientSchema, a, defineData } from "@aws-amplify/backend";
 const schema = a.schema({
   Page: a
     .model({
+      id: a.id().required(),
       title: a.string().required(),
       description: a.string().required(),
       url: a.string().required(),
       pageType: a.string().required(),
       sortOrder: a.integer() 
     })
-}).authorization((allow) => [
+    .identifier(['id', 'pageType'])
+})
+.authorization((allow) => [
     allow.publicApiKey().to(['read']), 
 ]);
 

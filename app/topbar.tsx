@@ -4,6 +4,11 @@ import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { CSSTransition } from "react-transition-group";
 
+import { Amplify } from "aws-amplify";
+import outputs from "../amplify_outputs.json";
+
+Amplify.configure(outputs);
+
 export function Topbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
