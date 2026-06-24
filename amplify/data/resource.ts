@@ -7,10 +7,10 @@ const schema = a.schema({
       title: a.string().required(),
       description: a.string().required(),
       url: a.string().required(),
-      pageType: a.string().required(),
-      sortOrder: a.integer() 
+      pageType: a.string().required()
     })
     .identifier(['id', 'pageType'])
+    .secondaryIndexes((index) => [index('id')])
 })
 .authorization((allow) => [
     allow.publicApiKey().to(['read']), 

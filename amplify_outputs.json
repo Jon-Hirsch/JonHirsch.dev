@@ -48,13 +48,6 @@
               "isRequired": true,
               "attributes": []
             },
-            "sortOrder": {
-              "name": "sortOrder",
-              "isArray": false,
-              "type": "Int",
-              "isRequired": false,
-              "attributes": []
-            },
             "createdAt": {
               "name": "createdAt",
               "isArray": false,
@@ -85,6 +78,16 @@
                 "fields": [
                   "id",
                   "pageType"
+                ]
+              }
+            },
+            {
+              "type": "key",
+              "properties": {
+                "name": "pagesById",
+                "queryField": "listPageById",
+                "fields": [
+                  "id"
                 ]
               }
             },
