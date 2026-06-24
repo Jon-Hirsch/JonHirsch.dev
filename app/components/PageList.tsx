@@ -1,11 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { Schema } from "@/amplify/data/resource";
-import { useEffect, useState } from "react";
-import { generateClient } from "aws-amplify/data";
 
-const client = generateClient<Schema>();
+import { useEffect, useState } from "react";
+import { fetchPages } from "../data/fetchPages";
 
 type Page = {
   id: string;
@@ -18,26 +16,8 @@ type Page = {
 export default function PageList(props: { pageType: string }) {
   const [pages, setPages] = useState<Page[]>([]);
 
-  const fetchPages = async () => {
-    try {
-      const { data: items, errors } = await client.models.Page.list({
-        selectionSet: ["id", "title", "description", "pageType", "url"],
-        filter: { pageType: { eq: props.pageType } },
-      });
-
-      if (errors) {
-        console.error("Errors fetching pages:", errors);
-        return;
-      }
-
-      setPages(items);
-    } catch (err) {
-      console.error("Exception fetching pages:", err);
-    }
-  };
-
   useEffect(() => {
-    fetchPages();
+    fetchPages(props.pageType).then((pages: Page[]) => setPages(pages || []));
   }, []);
 
   return (
