@@ -119,7 +119,15 @@ export default function SearchPage() {
         {filteredPages.map((page) => (
           <div key={page.id} className="article-div" data-testid="article-div">
             <h3 className="article-link">
-              <Link href={`${page.url}`}>{page.title}</Link>
+              <Link
+                href={`${
+                  page.pageType === "project"
+                    ? "/personal-projects"
+                    : "/articles"
+                }/${page.url}`}
+              >
+                {page.title}
+              </Link>
             </h3>
             <p className="article-description">{page.description}</p>
           </div>

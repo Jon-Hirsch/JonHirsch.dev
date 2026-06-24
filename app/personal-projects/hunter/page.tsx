@@ -1,6 +1,7 @@
 "use client";
 
 import Helmet from "react-helmet";
+import Link from "next/link";
 
 export default function Hunter() {
   return (
@@ -15,9 +16,9 @@ export default function Hunter() {
         one exercise in writing in a more Object Oriented style.
       </p>
       The source code can be seen here:{" "}
-      <a href="https://github.com/Jon-Hirsch/Hunter" target="_blank">
+      <Link href="https://github.com/Jon-Hirsch/Hunter" target="_blank">
         https://github.com/Jon-Hirsch/Hunter
-      </a>
+      </Link>
       <div id="hunterContainer" className="game-container"></div>
       <Helmet>
         <script src="/scripts/hunter/hunter.js"></script>

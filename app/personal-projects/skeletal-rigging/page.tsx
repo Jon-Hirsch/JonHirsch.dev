@@ -1,6 +1,7 @@
 "use client";
 
 import Helmet from "react-helmet";
+import Link from "next/link";
 
 export default function SkeletalRigging() {
   return (
@@ -16,10 +17,10 @@ export default function SkeletalRigging() {
         JavaScript. I ended up with this posable stickman. Drag the circles to
         pose him.
       </p>
-      The source code can be found here:
-      <a href="https://github.com/Jon-Hirsch/SkeletalRigging">
+      The source code can be found here:{" "}
+      <Link href="https://github.com/Jon-Hirsch/SkeletalRigging">
         https://github.com/Jon-Hirsch/SkeletalRigging
-      </a>
+      </Link>
       <div id="SkeletalRiggingContainer" className="game-container"></div>
       <Helmet>
         <script src="/scripts/skeletal-rigging/skeletal-rigging.js"></script>
@@ -27,3 +28,4 @@ export default function SkeletalRigging() {
     </div>
   );
 }
+``;
