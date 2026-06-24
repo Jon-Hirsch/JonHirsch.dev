@@ -24,15 +24,15 @@ export default function SearchPage() {
   const [name, setName] = useState("");
   const [order, setOrder] = useState("asc");
 
-  function handleCategoryChange(e) {
+  function handleCategoryChange(e: React.ChangeEvent<HTMLInputElement>) {
     setCategory(e.target.value);
   }
 
-  function handleNameChange(e) {
+  function handleNameChange(e: React.ChangeEvent<HTMLInputElement>) {
     setName(e.target.value);
   }
 
-  function handleOrderChange(e) {
+  function handleOrderChange(e: React.ChangeEvent<HTMLInputElement>) {
     setOrder(e.target.value);
   }
 
