@@ -1,0 +1,27 @@
+"use client";
+
+import Helmet from "react-helmet";
+
+export default function Hunter() {
+  return (
+    <div>
+      <h1>Hunter</h1>
+      <p>
+        I usually try to avoid writing JavaScript in an Object Oriented style
+        with classes, inheritance, and all the rest. I've found a that
+        functional style just tends to work well for me. That said, there are
+        some situations where I still find OOP useful in JavaScript. One of them
+        is when I want to create game objects to render on a canvas. This was
+        one exercise in writing in a more Object Oriented style.
+      </p>
+      The source code can be seen here:{" "}
+      <a href="https://github.com/Jon-Hirsch/Hunter" target="_blank">
+        https://github.com/Jon-Hirsch/Hunter
+      </a>
+      <div id="hunterContainer" className="game-container"></div>
+      <Helmet>
+        <script src="/scripts/hunter/hunter.js"></script>
+      </Helmet>
+    </div>
+  );
+}

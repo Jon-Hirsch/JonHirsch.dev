@@ -20,13 +20,16 @@ export default function PageList(props: { pageType: string }) {
     fetchPages(props.pageType).then((pages: Page[]) => setPages(pages || []));
   }, []);
 
+  const urlPrefix =
+    props.pageType === "project" ? "/personal-projects" : "/articles";
+
   return (
     <div>
       <div className="articles-list">
         {pages.map((page) => (
           <div key={page.id} className="article-div" data-testid="article-div">
             <h3 className="article-link">
-              <Link href={`${page.url}`}>{page.title}</Link>
+              <Link href={`${urlPrefix}/${page.url}`}>{page.title}</Link>
             </h3>
             <p className="article-description">{page.description}</p>
           </div>

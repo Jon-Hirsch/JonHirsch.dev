@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { CSSTransition } from "react-transition-group";
 
@@ -11,30 +11,11 @@ Amplify.configure(outputs);
 
 export function Topbar() {
   const [showMenu, setShowMenu] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function handleScroll() {
-      if (!isScrolled && window.scrollY > 35) {
-        setIsScrolled(true);
-      } else if (isScrolled && window.scrollY <= 35) {
-        setIsScrolled(false);
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isScrolled]);
 
   return (
     <>
-      <div
-        className={isScrolled ? "page-header scrolled" : "page-header"}
-        data-testid="page-header"
-      >
+      <div className={"page-header"} data-testid="page-header">
         <Link className="home-link" href="/">
           jonhirsch.dev
         </Link>
