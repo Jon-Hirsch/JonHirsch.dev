@@ -17,6 +17,10 @@ export const fetchPages = async (pageType?: string) => {
       return [];
     }
 
+    items.sort((a, b) => {
+      return Number(a.id) - Number(b.id);
+    });
+
     return items;
   } catch (err) {
     console.error("Exception fetching pages:", err);
